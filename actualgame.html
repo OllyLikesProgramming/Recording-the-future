@@ -31,7 +31,7 @@
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input  name="first_name" placeholder="Full name" class="form-control"  type="text">
+                    <input name="first_name" placeholder="Full name" class="form-control"  type="text" id="first_name">
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
             <div class="col-md-4 selectContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                    <select name="department" class="form-control selectpicker">
+                    <select name="department" class="form-control selectpicker" id="department">
                         <option value="">Country</option>
                         <option>Canada</option>
                         <option>United States</option>
@@ -99,7 +99,27 @@
     </div>
     <br>
     
-    <center><button type="button" class="btn btn-outline-dark btn-lg">Launch Career!</button></center>
+    <center><button type="button" onclick="myFunction()" class="btn btn-outline-dark btn-lg">Launch Career!</button></center>
 <body id="page-top" style="background:url('background.jpg')"></body>
 
+    
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+
+    
+    
+    
+    
+    <script>
+function myFunction() {
+  var x = document.getElementById("first_name").value;
+  document.getElementById("demo").innerHTML = x;
+  var y = document.getElementById("department").value;
+  document.getElementById("demo1").innerHTML = y;
+}
+</script>
+    
+    
+    
 </html>
