@@ -24,6 +24,8 @@ function myFunction() {
 function alertFunction(){
      alert("Page is loaded");
 var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var page_type = urlParams.get('playername')
   //      var var1 = new Querystring();
   //  var var2 = qs.get("playername")
 alert(queryString)
