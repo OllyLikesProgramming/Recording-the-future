@@ -1,7 +1,10 @@
 <html>
    
-<body onload="alertFunction()">
-
+<body onload="myFunction()">
+<form id="myForm" >
+<label >First name is :</label>
+<input type="text" id="fn" name="fn"><br><br>
+</form>
 <section class="my-5">
   <div class="container">
     <div class="row">
@@ -18,67 +21,34 @@
     
  
 <script>
+    
+    
+    
+    
 function myFunction() {
+var queryString = window.location.search;
+var searchParams = new URLSearchParams(queryString);
+var firstname = searchParams.get("fname")
+document.getElementById("fn").value = firstname;
 }
 
 function alertFunction(){
-     alert("Page is loaded");
-   alert("new");
-var queryString = window.location.search;
-var urlParams = new URLSearchParams(queryString);
-var playername = urlParams.get('playername')
-alert(playername)
-  //      var var1 = new Querystring();
-  //  var var2 = qs.get("playername")
-alert(queryString)
-//alert(var2)
+    
+        var var1 = new Querystring();
+    var var2 = qs.get("playername")
+alert(var1)
+alert(var2)
+    
+const queryString = window.location.search;
+
+const urlParams = new URLSearchParams(queryString);
+
+const page_type = urlParams.get('page_type')
+
+console.log(page_type);    
+    
 }
 </script>
 </body>
     
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
