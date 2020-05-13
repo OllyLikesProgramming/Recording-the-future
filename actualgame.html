@@ -101,9 +101,16 @@
     
 
     
-  <center>  <a href="https://ollylikesprogramming.github.io/Recording-the-future/thegame.html?playername=" class="btn btn-o0utline-dark btn-lg" role="button" id="myLink" >Launch Career!</a></center>
+  <center>  <a href="https://ollylikesprogramming.github.io/Recording-the-future/thegame.html?playername=x" class="btn btn-o0utline-dark btn-lg" role="button" >Launch Career!</a></center>
 
-<body id="page-top" style="background:url('background.jpg')"></body>
+<body id="page-top" style="background:url('background.jpg')">
+    <form id="myForm" action = "https://ollylikesprogramming.github.io/Recording-the-future/thegame.html" method="get">
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname"><br><br>
+ <input type="submit" value="Launch">
+</form>
+    
+    </body>
 
     
     <p id="demo"></p>
@@ -118,7 +125,6 @@
 function myFunction() {
   var x = document.getElementById("first_name").value;
   document.getElementById("demo").innerHTML = x;
-  document.getElementById("myLink").href = document.getElementById("myLink").href + x
   var y = document.getElementById("department").value;
   document.getElementById("demo1").innerHTML = y;
 }
