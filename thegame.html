@@ -4,6 +4,9 @@
 <form id="myForm" >
 <label >First name is :</label>
 <input type="text" id="fn" name="fn"><br><br>
+    <label >Country From: </label>
+<input type="text" id="country" name="country"><br><br>
+
 </form>
 <section class="my-5">
   <div class="container">
@@ -29,7 +32,11 @@ function myFunction() {
 var queryString = window.location.search;
 var searchParams = new URLSearchParams(queryString);
 var firstname = searchParams.get("fname")
+var country_born = searchParams.get("country")
+
 document.getElementById("fn").value = firstname;
+document.getElementById("country").value = country_born;
+
 }
 
 function alertFunction(){
